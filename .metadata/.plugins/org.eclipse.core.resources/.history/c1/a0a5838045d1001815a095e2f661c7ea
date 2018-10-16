@@ -51,4 +51,6 @@ public class ProvinsiModel {
 	public void setPersenTunjangan(Double persenTunjangan) {
 		this.persenTunjangan = persenTunjangan;
 	}
+	
+	
 }
