@@ -3,17 +3,15 @@ package com.apap.tugas1.model;
 import java.io.Serializable;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
 /**
- * Instansi Model
+ * Jabatan Model
  * @author rico.putra
  * @version 16/10/2018
  */
 @Entity
-@Table(name = "instansi")
-public class InstansiModel implements Serializable {
+@Table(name = "jabatan")
+public class JabatanModel implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -26,10 +24,9 @@ public class InstansiModel implements Serializable {
 	@Column(name = "deskripsi", nullable = false)
 	private String deskripsi;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_provinsi", referencedColumnName = "id", nullable = false)
-	@OnDelete(action = OnDeleteAction.NO_ACTION)
-	private ProvinsiModel provinsi;
+	@NotNull
+	@Column(name = "gaji_pokok", nullable = false)
+	private Double gajiPokok;
 
 	public long getId() {
 		return id;
@@ -55,13 +52,11 @@ public class InstansiModel implements Serializable {
 		this.deskripsi = deskripsi;
 	}
 
-	public ProvinsiModel getProvinsi() {
-		return provinsi;
+	public Double getGajiPokok() {
+		return gajiPokok;
 	}
 
-	public void setProvinsi(ProvinsiModel provinsi) {
-		this.provinsi = provinsi;
+	public void setGajiPokok(Double gajiPokok) {
+		this.gajiPokok = gajiPokok;
 	}
-	
-	
 }
