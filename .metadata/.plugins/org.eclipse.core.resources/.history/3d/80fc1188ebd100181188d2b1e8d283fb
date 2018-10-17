@@ -32,9 +32,6 @@
 				<td>Nama Instansi</td>
 				<td th:text="${pegawai.instansi.nama} + ' - ' + ${pegawai.instansi.provinsi.nama}"></td>
 			</tr>
-			<tr height="30">
-				<td>Jabatan</td>
-			</tr>
 		</table>
 	</body>
 </html>

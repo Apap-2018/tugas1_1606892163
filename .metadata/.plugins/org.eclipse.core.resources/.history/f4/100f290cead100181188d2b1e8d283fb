@@ -8,32 +8,29 @@
 		<nav th:replace="fragments/fragment :: navbar"></nav>
 		<h3 th:text="'Lihat Data Pegawai - ' + ${pegawai.nip}"></h3>
 		<table>
-			<tr height="30">
-				<td width="300">NIP</td>
+			<tr>
+				<td width="300" height="50">NIP</td>
 				<td th:text="${pegawai.nip}"></td>
 			</tr>
-			<tr height="30">
+			<tr>
 				<td>Nama</td>
 				<td th:text="${pegawai.nama}"></td>
 			</tr>
-			<tr height="30">
+			<tr>
 				<td>Tempat Lahir</td>
 				<td th:text="${pegawai.tmpLahir}"></td>
 			</tr>
-			<tr height="30">
+			<tr>
 				<td>Tanggal Lahir</td>
 				<td th:text="${pegawai.tglLahir}"></td>
 			</tr>
-			<tr height="30">
+			<tr>
 				<td>Tahun Masuk</td>
 				<td th:text="${pegawai.thnMasuk}"></td>
 			</tr>
-			<tr height="30">
+			<tr>
 				<td>Nama Instansi</td>
-				<td th:text="${pegawai.instansi.nama} + ' - ' + ${pegawai.instansi.provinsi.nama}"></td>
-			</tr>
-			<tr height="30">
-				<td>Jabatan</td>
+				<td th:text="${pegawai.instansi.nama}"></td>
 			</tr>
 		</table>
 	</body>
