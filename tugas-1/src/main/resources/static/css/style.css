@@ -1,0 +1,17 @@
+.jumbotron {
+	background-color: #3498db;
+	color: white;
+	padding: 15%;
+	border-radius: 0;
+}
+.form-area {
+	padding: 10%;
+}
+.form-box {
+	background-color: #3498db;
+	padding: 10% 10% 20% 10%;
+	border-radius: 12px;
+}
+.form-box button {
+	margin-top : 5%;
+}

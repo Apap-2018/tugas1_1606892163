@@ -1,0 +1,22 @@
+package com.apap.tugas1.controller;
+
+import java.util.Collections;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+/**
+ * PegawaiController
+ * @author rico.putra
+ * @version 17/10/18
+ */
+@Controller
+public class PegawaiController {
+	@RequestMapping("/")
+	private String home(Model model) {
+		model.addAttribute("pageTitle", "Home");
+		return "home";
+	}
+}
