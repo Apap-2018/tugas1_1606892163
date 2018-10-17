@@ -40,12 +40,7 @@ public class JabatanModel implements Serializable {
 	@Column(name = "gaji_pokok", nullable = false)
 	private Double gajiPokok;
 
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(
-			name = "jabatan_pegawai",
-			joinColumns = @JoinColumn(name = "id_pegawai", referencedColumnName = "id"),
-			inverseJoinColumns = @JoinColumn(name = "id_jabatan", referencedColumnName = "id"))
-	private List<JabatanModel> jabatan = new ArrayList<JabatanModel>();
+	
 	
 	public long getId() {
 		return id;

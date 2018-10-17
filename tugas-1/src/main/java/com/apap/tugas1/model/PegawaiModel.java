@@ -1,10 +1,24 @@
 package com.apap.tugas1.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -44,6 +58,13 @@ public class PegawaiModel implements Serializable {
 	@JoinColumn(name = "id_instansi", referencedColumnName = "id", nullable = false)
 	@OnDelete(action = OnDeleteAction.NO_ACTION)
 	private InstansiModel instansi;
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(
+			name = "jabatan_pegawai",
+			joinColumns = @JoinColumn(name = "id_pegawai"),
+			inverseJoinColumns = @JoinColumn(name = "id_jabatan"))
+	private List<JabatanModel> jabatan = new ArrayList<JabatanModel>();
 
 	public long getId() {
 		return id;
@@ -100,4 +121,39 @@ public class PegawaiModel implements Serializable {
 	public void setInstansi(InstansiModel instansi) {
 		this.instansi = instansi;
 	}
+
+	public List<JabatanModel> getJabatan() {
+		return jabatan;
+	}
+
+	public void setJabatan(List<JabatanModel> jabatan) {
+		this.jabatan = jabatan;
+	}
+	
+	/**
+	 * Method untuk mendapatkan gaji seorang pegawai.
+	 * Constrain : jika seorang pegawai memiliki lebih dari satu jabatan, maka gaji pokok yang dihitung adalah gaji pokok yang paling besar.
+	 * @return Integer gaji pegawai
+	 */
+	public Integer getGaji() {
+		List<JabatanModel> listJabatan = this.getJabatan();
+		Double gajiPokok = 0.0;
+		Double gaji = 0.0;
+		Double persenTunjangan = 0.0;
+		Double gajiHitungTunjangan = 0.0;
+		
+		for (JabatanModel jabatan : listJabatan) {
+			if (jabatan.getGajiPokok() > gajiPokok) {
+				gajiPokok = jabatan.getGajiPokok();
+				persenTunjangan = this.getInstansi().getProvinsi().getPersenTunjangan();
+				gajiHitungTunjangan = (gajiPokok + (persenTunjangan * gajiPokok / 100));
+				
+				if (gajiHitungTunjangan > gaji) {
+					gaji = gajiHitungTunjangan;
+				}
+			}
+		}
+		return gaji.intValue();
+	}
+	
 }

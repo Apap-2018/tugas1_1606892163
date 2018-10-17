@@ -8,32 +8,41 @@
 		<nav th:replace="fragments/fragment :: navbar"></nav>
 		<h3 th:text="'Lihat Data Pegawai - ' + ${pegawai.nip}"></h3>
 		<table>
-			<tr height="30">
-				<td width="300">NIP</td>
+			<tr>
+				<td height="30" width="300">NIP</td>
 				<td th:text="${pegawai.nip}"></td>
 			</tr>
-			<tr height="30">
-				<td>Nama</td>
+			<tr>
+				<td height="30">Nama</td>
 				<td th:text="${pegawai.nama}"></td>
 			</tr>
-			<tr height="30">
-				<td>Tempat Lahir</td>
+			<tr>
+				<td height="30">Tempat Lahir</td>
 				<td th:text="${pegawai.tmpLahir}"></td>
 			</tr>
-			<tr height="30">
-				<td>Tanggal Lahir</td>
+			<tr>
+				<td height="30">Tanggal Lahir</td>
 				<td th:text="${pegawai.tglLahir}"></td>
 			</tr>
-			<tr height="30">
-				<td>Tahun Masuk</td>
+			<tr>
+				<td height="30">Tahun Masuk</td>
 				<td th:text="${pegawai.thnMasuk}"></td>
 			</tr>
-			<tr height="30">
-				<td>Nama Instansi</td>
+			<tr>
+				<td height="30">Nama Instansi</td>
 				<td th:text="${pegawai.instansi.nama} + ' - ' + ${pegawai.instansi.provinsi.nama}"></td>
 			</tr>
-			<tr height="30">
-				<td>Jabatan</td>
+			<tr>
+				<td style="vertical-align: top;" height="30">Jabatan</td>
+				<td style="vertical-align: top;">
+					<ul th:each="jabatan : ${listJabatan}">
+						<li><p th:text="${jabatan.nama}"></p></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td height="30">Gaji</td>
+				<td th:text="${gaji}"></td>
 			</tr>
 		</table>
 	</body>
