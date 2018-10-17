@@ -1,6 +1,5 @@
 package com.apap.tugas1.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +18,7 @@ public class JabatanServiceImpl implements JabatanService {
 		return jabatanDb.findById(id);
 	}
 	
-	@Override 
-	public List<JabatanModel> getAllJabatan() {
-		return jabatanDb.findAll();
+	@Override List<JabatanModel> getAllJabatan() {
+		
 	}
 }

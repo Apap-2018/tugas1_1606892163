@@ -854,3 +854,108 @@
 2018-10-17 19:41:38,209 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2018-10-17 19:41:38,227 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-10-17 19:41:38,227 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 19:42:03,501 [Worker-104: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 19:42:03,502 [Worker-104: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 19:42:03,503 [Worker-104: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 19:42:03,527 [Worker-104: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 19:42:03,528 [Worker-104: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 19:48:51,667 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 19:48:51,669 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 19:48:51,672 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 19:48:51,728 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 19:48:51,728 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:00:05,582 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:00:05,584 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 20:00:05,592 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:00:05,648 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:00:05,649 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:01:29,098 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:01:29,104 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:01:29,189 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:01:29,206 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:01:29,206 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:01:38,109 [Worker-113: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:01:38,117 [Worker-113: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:01:38,126 [Worker-113: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:01:38,144 [Worker-113: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:01:38,145 [Worker-113: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:01:56,181 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:01:56,188 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:01:56,197 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:01:56,213 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:01:56,214 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:02:11,525 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:11,529 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:02:11,534 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:02:11,545 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:11,545 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:02:14,874 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:14,880 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:02:14,897 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:02:14,934 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:14,934 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:02:29,820 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:29,826 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:02:29,834 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:02:29,852 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:29,853 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:02:36,372 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:36,376 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:02:36,383 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:02:36,396 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:36,396 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:02:39,647 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:39,653 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:02:39,660 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:02:39,676 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:39,676 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:02:49,719 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:49,725 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:02:49,738 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:02:49,786 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:02:49,788 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:13:39,604 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:13:39,611 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:13:39,645 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:13:39,664 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:13:39,665 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:14:47,547 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:14:47,552 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:14:47,589 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 25 resources
+2018-10-17 20:14:47,606 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:14:47,606 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:16:51,113 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:16:51,115 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 20:16:51,121 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:16:51,171 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:16:51,173 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:16:53,979 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:16:53,980 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 20:16:53,981 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:16:53,998 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:16:53,999 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:18:05,051 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:18:05,052 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 20:18:05,054 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:18:05,103 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:18:05,104 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:18:12,343 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:18:12,344 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 20:18:12,347 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:18:12,363 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:18:12,364 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:19:02,982 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:19:02,984 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 20:19:02,985 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:19:03,000 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:19:03,001 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:19:07,269 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:19:07,270 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 20:19:07,271 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:19:07,287 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:19:07,287 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources
+2018-10-17 20:19:26,422 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:19:26,424 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-17 20:19:26,425 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-10-17 20:19:26,442 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-17 20:19:26,442 [Worker-110: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Kuliah\Indonesia\SEMESTER\Semester 5\APAP A\Tugas\Tugas 1\tugas-1\src\test\resources

@@ -30,9 +30,9 @@
 						<br>
 						<p>Pilih Jabatan</p>
 						
-						<form th:action="@{/jabatan/view}" id="formJabatan" method="GET">
-							<select required="required" name="idJabatan" form="formJabatan" class="form-control">
-								<option disabled="disabled" selected="selected">Pilih Jabatan</option>
+						<form th:action="@{/jabatan/view}" id="jabatanForm" method="GET">
+							<select required="required" name="idJabatan" form="formJabatan">
+								<option disabled="disabled" selected="selected" >Pilih Jabatan</option>
 								<span th:each="jabatan : ${listJabatanAll}">
 									<option th:value="${jabatan.id}" th:text="${jabatan.nama}"></option>
 								</span>

@@ -29,15 +29,17 @@
 						<h3>Lihat Detail Jabatan</h3>
 						<br>
 						<p>Pilih Jabatan</p>
-						
 						<form th:action="@{/jabatan/view}" id="formJabatan" method="GET">
-							<select required="required" name="idJabatan" form="formJabatan" class="form-control">
-								<option disabled="disabled" selected="selected">Pilih Jabatan</option>
+							<input type="text" name="idJabatan" class="form-control" />
+							<button type="submit" class="btn btn-primary btn-block">Lihat</button>
+						</form>
+						<form th:action="@{/jabatan/view}" method="GET">
+							<select required="required" name="idJabatan" form="formJabatan">
+								<option disabled="disabled" selected="selected" >Pilih Jabatan</option>
 								<span th:each="jabatan : ${listJabatanAll}">
 									<option th:value="${jabatan.id}" th:text="${jabatan.nama}"></option>
 								</span>
 							</select>
-							<button type="submit" class="btn btn-primary btn-block">Lihat</button>
 						</form>
 					</div>
 				</div>

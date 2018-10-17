@@ -20,7 +20,7 @@ public class JabatanServiceImpl implements JabatanService {
 	}
 	
 	@Override 
-	public List<JabatanModel> getAllJabatan() {
+	List<JabatanModel> getAllJabatan() {
 		return jabatanDb.findAll();
 	}
 }
