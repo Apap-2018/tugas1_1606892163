@@ -29,8 +29,8 @@ public class PegawaiController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/pegawai/view", method = RequestMethod.GET)
-	private String viewPegawaiByNip(@RequestParam(value = "pegawaiNip", required = true) String nip, Model model) {
+	@RequestMapping(value = "/pegawai", method = RequestMethod.GET)
+	private String viewPegawaiByNip(@RequestParam(value = "nip", required = true) String nip, Model model) {
 		PegawaiModel pegawai = null;
 		List<JabatanModel> listJabatan = null;
 		

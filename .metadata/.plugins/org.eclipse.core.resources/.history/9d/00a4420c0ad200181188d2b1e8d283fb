@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<object th:include="fragments/fragment :: header" th:remove="tag"></object>
+	</head>
+	
+	<body>
+		<nav th:replace="fragments/fragment :: navbar"></nav>
+		<h3 th:text="'Detail Jabatan '"></h3>
+		<table>
+			<tr>
+				<td height="30" width="300">Nama</td>
+				<td th:text="${jabatan.nama}"></td>
+			</tr>
+			<tr>
+				<td height="30" width="300">Deskripsi</td>
+				<td th:text="${jabatan.deskripsi}"></td>
+			</tr>
+			<tr>
+				<td height="30" width="300">Gaji Pokok</td>
+				<td th:text="${jabatan.gaji_pokok}"></td>
+			</tr>
+		</table>
+	</body>
+</html>

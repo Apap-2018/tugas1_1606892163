@@ -13,6 +13,6 @@ import com.apap.tugas1.model.PegawaiModel;
  * @version 17/10/2018
  */
 @Repository
-public interface PegawaiDb extends JpaRepository<PegawaiModel, String>{
+public interface PegawaiDb extends JpaRepository<PegawaiModel, Long>{
 	Optional<PegawaiModel> findByNip(String nip);
 }

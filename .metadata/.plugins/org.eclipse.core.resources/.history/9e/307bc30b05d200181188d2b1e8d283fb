@@ -1,0 +1,10 @@
+package com.apap.tugas1.controller;
+
+/**
+ * JabatanController
+ * @author rico.putra
+ * @version 17/10/2018
+ */
+public class JabatanController {
+
+}
