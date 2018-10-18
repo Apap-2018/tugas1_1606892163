@@ -9,4 +9,8 @@ public interface JabatanService {
 	Optional<JabatanModel> getDetailJabatanById(long id);
 	
 	List<JabatanModel> getAllJabatan();
+	
+	void addJabatan(JabatanModel jabatan);
+	
+	void updateJabatan(Long idJabatan, JabatanModel jabatanNew);
 }

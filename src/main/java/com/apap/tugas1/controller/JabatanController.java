@@ -3,6 +3,7 @@ package com.apap.tugas1.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,4 +33,38 @@ public class JabatanController {
 		model.addAttribute("pageTitle", "Detail Jabatan");
 		return "view-jabatan";
 	}
+	
+	@RequestMapping(value = "/jabatan/tambah", method = RequestMethod.GET)
+	private String addJabatan(Model model) {
+		model.addAttribute("pageTitle", "Tambah Jabatan");
+		return "add-jabatan";
+	}
+	
+	@RequestMapping(value = "/jabatan/tambah", method = RequestMethod.POST)
+	private String addJabatanSubmit(@ModelAttribute JabatanModel jabatan, Model model) {
+		jabatanService.addJabatan(jabatan);
+		model.addAttribute("pageTitle", "Tambah Jabatan Sukses");
+		return "jabatan-added";
+	}
+	
+	@RequestMapping(value = "/jabatan/ubah", method = RequestMethod.GET)
+	private String ubahJabatan(@RequestParam(value = "idJabatan", required = true) long id, Model model) {
+		JabatanModel jabatan = null;
+		
+		if (jabatanService.getDetailJabatanById(id).isPresent()) {
+			jabatan = jabatanService.getDetailJabatanById(id).get();
+		}
+		model.addAttribute("jabatan", jabatan);
+		model.addAttribute("pageTitle", "Ubah Jabatan");
+		return "ubah-jabatan";
+	}
+	
+	@RequestMapping(value = "/jabatan/ubah", method = RequestMethod.POST)
+	private String ubahJabatanSubmit(@ModelAttribute JabatanModel jabatanNew, Model model) {
+		
+		jabatanService.updateJabatan(jabatanNew.getId(), jabatanNew);
+		model.addAttribute("pageTitle", "Ubah Jabatan Sukses");
+		return "jabatan-changed";
+	}
+	
 }

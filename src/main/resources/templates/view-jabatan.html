@@ -6,7 +6,7 @@
 	
 	<body>
 		<nav th:replace="fragments/fragment :: navbar"></nav>
-		<h3 th:text="'Detail Jabatan '"></h3>
+		<h3 th:text="'Detail Jabatan ' + ${jabatan.nama}"></h3>
 		<table>
 			<tr>
 				<td height="30" width="300">Nama</td>
@@ -21,5 +21,11 @@
 				<td th:text="${jabatan.gajiPokok}"></td>
 			</tr>
 		</table>
+		
+		<form th:action="@{/jabatan/ubah}" id="ubahJabatan" method="GET">
+			<input type="hidden" name="idJabatan" th:value="${jabatan.id}"/>
+			<input type="submit" class="btn btn-light" value="Ubah"/>
+		</form>
+
 	</body>
 </html>
