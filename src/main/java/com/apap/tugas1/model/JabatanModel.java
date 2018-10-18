@@ -40,8 +40,10 @@ public class JabatanModel implements Serializable {
 	@Column(name = "gaji_pokok", nullable = false)
 	private Double gajiPokok;
 
+	@ManyToMany(mappedBy = "jabatans")
+	private List<PegawaiModel> pegawais;
 	
-	
+
 	public long getId() {
 		return id;
 	}
@@ -72,5 +74,13 @@ public class JabatanModel implements Serializable {
 
 	public void setGajiPokok(Double gajiPokok) {
 		this.gajiPokok = gajiPokok;
+	}
+	
+	public List<PegawaiModel> getPegawais() {
+		return pegawais;
+	}
+
+	public void setPegawais(List<PegawaiModel> pegawais) {
+		this.pegawais = pegawais;
 	}
 }

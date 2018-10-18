@@ -67,4 +67,17 @@ public class JabatanController {
 		return "jabatan-changed";
 	}
 	
+	@RequestMapping(value = "/jabatan/hapus", method = RequestMethod.POST)
+	private String hapusJabatan(@RequestParam(value = "idJabatan", required = true) long id, Model model) {
+		try {
+			jabatanService.deleteJabatanById(id);
+			model.addAttribute("isTerhapus", "telah");
+			model.addAttribute("pageTitle", "Jabatan telah terhapus");
+		}
+		catch (Exception e) {
+			model.addAttribute("isTerhapus", "tidak dapat");
+			model.addAttribute("pageTitle", "Jabatan tidak dapat dihapus");
+		}
+		return "jabatan-deleted";
+	}
 }

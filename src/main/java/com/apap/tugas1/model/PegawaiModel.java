@@ -64,7 +64,7 @@ public class PegawaiModel implements Serializable {
 			name = "jabatan_pegawai",
 			joinColumns = @JoinColumn(name = "id_pegawai"),
 			inverseJoinColumns = @JoinColumn(name = "id_jabatan"))
-	private List<JabatanModel> jabatan = new ArrayList<JabatanModel>();
+	private List<JabatanModel> jabatans = new ArrayList<JabatanModel>();
 
 	public long getId() {
 		return id;
@@ -123,11 +123,11 @@ public class PegawaiModel implements Serializable {
 	}
 
 	public List<JabatanModel> getJabatan() {
-		return jabatan;
+		return jabatans;
 	}
 
 	public void setJabatan(List<JabatanModel> jabatan) {
-		this.jabatan = jabatan;
+		this.jabatans = jabatan;
 	}
 	
 	/**

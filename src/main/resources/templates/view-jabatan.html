@@ -6,26 +6,34 @@
 	
 	<body>
 		<nav th:replace="fragments/fragment :: navbar"></nav>
-		<h3 th:text="'Detail Jabatan ' + ${jabatan.nama}"></h3>
-		<table>
-			<tr>
-				<td height="30" width="300">Nama</td>
-				<td th:text="${jabatan.nama}"></td>
-			</tr>
-			<tr>
-				<td height="30" width="300">Deskripsi</td>
-				<td th:text="${jabatan.deskripsi}"></td>
-			</tr>
-			<tr>
-				<td height="30" width="300">Gaji Pokok</td>
-				<td th:text="${jabatan.gajiPokok}"></td>
-			</tr>
-		</table>
 		
-		<form th:action="@{/jabatan/ubah}" id="ubahJabatan" method="GET">
-			<input type="hidden" name="idJabatan" th:value="${jabatan.id}"/>
-			<input type="submit" class="btn btn-light" value="Ubah"/>
-		</form>
-
+		<div class="container-fluid">
+			<h3 th:text="'Detail Jabatan ' + ${jabatan.nama}"></h3>
+			<table>
+				<tr>
+					<td height="30" width="300">Nama</td>
+					<td th:text="${jabatan.nama}"></td>
+				</tr>
+				<tr>
+					<td height="30" width="300">Deskripsi</td>
+					<td th:text="${jabatan.deskripsi}"></td>
+				</tr>
+				<tr>
+					<td height="30" width="300">Gaji Pokok</td>
+					<td th:text="${jabatan.gajiPokok}"></td>
+				</tr>
+			</table>
+			
+			<div class="row">
+				<form th:action="@{/jabatan/ubah}" id="ubahJabatan" method="GET">
+					<input type="hidden" name="idJabatan" th:value="${jabatan.id}"/>
+					<input type="submit" class="btn btn-action" value="Ubah"/>
+				</form>
+				<form th:action="@{/jabatan/hapus}" id="hapusJabatan" method="POST">
+					<input type="hidden" name="idJabatan" th:value="${jabatan.id}"/>
+					<input type="submit" class="btn btn-action" value="Hapus"/>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
