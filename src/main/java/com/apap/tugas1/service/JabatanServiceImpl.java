@@ -35,5 +35,6 @@ public class JabatanServiceImpl implements JabatanService {
 		jabatanOld.setNama(jabatanNew.getNama());
 		jabatanOld.setDeskripsi(jabatanNew.getDeskripsi());
 		jabatanOld.setGajiPokok(jabatanNew.getGajiPokok());
+		jabatanDb.save(jabatanOld);
 	}
 }
