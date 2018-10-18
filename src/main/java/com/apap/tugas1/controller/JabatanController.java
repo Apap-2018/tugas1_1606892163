@@ -57,9 +57,9 @@ public class JabatanController {
 		model.addAttribute("jabatan", jabatan);
 		model.addAttribute("pageTitle", "Ubah Jabatan");
 		return "ubah-jabatan";
-	}
+	}	
 	
-	@RequestMapping(value = "/jabatan/ubah", method = RequestMethod.POST)
+	@RequestMapping(value = "/jabatan/ubah/", method = RequestMethod.POST)
 	private String ubahJabatanSubmit(@ModelAttribute JabatanModel jabatanNew, Model model) {
 		
 		jabatanService.updateJabatan(jabatanNew.getId(), jabatanNew);

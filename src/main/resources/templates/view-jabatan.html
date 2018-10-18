@@ -25,7 +25,7 @@
 			</table>
 			
 			<div class="row">
-				<form th:action="@{/jabatan/ubah}" id="ubahJabatan" method="GET">
+				<form th:action="@{/jabatan/ubah}" th:object="${jabatan}" id="ubahJabatan" method="GET">
 					<input type="hidden" name="idJabatan" th:value="${jabatan.id}"/>
 					<input type="submit" class="btn btn-action" value="Ubah"/>
 				</form>
