@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.apap.tugas1.model.InstansiModel;
 import com.apap.tugas1.model.JabatanModel;
 import com.apap.tugas1.model.PegawaiModel;
+import com.apap.tugas1.service.InstansiService;
 import com.apap.tugas1.service.JabatanService;
 import com.apap.tugas1.service.PegawaiService;
 
@@ -27,11 +29,18 @@ public class PegawaiController {
 	@Autowired
 	private JabatanService jabatanService;
 	
+	@Autowired
+	private InstansiService instansiService;
+	
+	
+	
 	@RequestMapping("/")
 	private String home(Model model) {
 		List<JabatanModel> listJabatanAll = jabatanService.getAllJabatan(); 
+		List<InstansiModel> listInstansiAll = instansiService.getAllInstansi();
 		model.addAttribute("pageTitle", "Home");
 		model.addAttribute("listJabatanAll", listJabatanAll);
+		model.addAttribute("listInstansiAll", listInstansiAll);
 		return "home";
 	}
 	
@@ -53,5 +62,25 @@ public class PegawaiController {
 		model.addAttribute("gaji", pegawai.getGaji());
 		model.addAttribute("pageTitle", "Detail Pegawai");
 		return "view-pegawai";
+	}
+	
+	@RequestMapping(value = "/pegawai/termuda-tertua", method = RequestMethod.GET)
+	private String viewPegawaiTermudaTertua(@RequestParam(value = "idInstansi", required = true) long idInstansi, Model model) {
+		
+		InstansiModel instansi = instansiService.getInstansiById(idInstansi).get();
+		List<PegawaiModel> listPegawaiTermudaTertua = pegawaiService.getPegawaiMudaTuaInstansi(instansi);
+		PegawaiModel pegawaiTermuda = listPegawaiTermudaTertua.get(0);
+		PegawaiModel pegawaiTertua = listPegawaiTermudaTertua.get(listPegawaiTermudaTertua.size() - 1);
+		List<JabatanModel> jabatanPegawaiTermuda = pegawaiTermuda.getJabatan();
+		List<JabatanModel> jabatanPegawaiTertua = pegawaiTertua.getJabatan();
+		
+		model.addAttribute("instansi", instansi);
+		model.addAttribute("pegawaiTermuda", pegawaiTermuda);
+		model.addAttribute("pegawaiTertua", pegawaiTertua);
+		model.addAttribute("jabatanPegawaiTermuda", jabatanPegawaiTermuda);
+		model.addAttribute("jabatanPegawaiTertua", jabatanPegawaiTertua);
+		model.addAttribute("pageTitle", "Detail Pegawai");
+		
+		return "view-pegawai-mudatua";
 	}
 }

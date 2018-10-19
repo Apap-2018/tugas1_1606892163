@@ -47,8 +47,13 @@
 					<div class="form-box">
 						<h3>Lihat Pegawai Tertua dan Termuda</h3>
 						<p>Pilih Instans</p>
-						<form th:action="@{/pegawai/view}" method="GET">
-							<input type="text" name="pegawaiNip" class="form-control" />
+						<form th:action="@{/pegawai/termuda-tertua}" id="formPegawaiMudaTua" method="GET">
+							<select required="required" name="idInstansi" form="formPegawaiMudaTua" class="form-control">
+								<option disabled="disabled" selected="selected">Pilih Instansi</option>
+								<span th:each="instansi : ${listInstansiAll}">
+									<option th:value="${instansi.id}" th:text="${instansi.nama}"></option>
+								</span>
+							</select>
 							<button type="submit" class="btn btn-primary btn-block">Lihat</button>
 						</form>
 					</div>

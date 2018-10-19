@@ -132,7 +132,8 @@ public class PegawaiModel implements Serializable {
 	
 	/**
 	 * Method untuk mendapatkan gaji seorang pegawai.
-	 * Constrain : jika seorang pegawai memiliki lebih dari satu jabatan, maka gaji pokok yang dihitung adalah gaji pokok yang paling besar.
+	 * Constraint : jika seorang pegawai memiliki lebih dari satu jabatan, 
+	 * maka gaji pokok yang dihitung adalah gaji pokok yang paling besar.
 	 * @return Integer gaji pegawai
 	 */
 	public Integer getGaji() {
@@ -155,5 +156,4 @@ public class PegawaiModel implements Serializable {
 		}
 		return gaji.intValue();
 	}
-	
 }
