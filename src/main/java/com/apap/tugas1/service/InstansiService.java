@@ -4,9 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import com.apap.tugas1.model.InstansiModel;
+import com.apap.tugas1.model.ProvinsiModel;
 
 public interface InstansiService {
 	Optional<InstansiModel> getInstansiById(long idInstansi);
 	
 	List<InstansiModel> getAllInstansi();
+	
+	List<InstansiModel> getListInstansiByProvinsi(ProvinsiModel provinsi);
 }

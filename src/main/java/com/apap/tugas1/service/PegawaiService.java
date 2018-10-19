@@ -10,4 +10,6 @@ public interface PegawaiService {
 	Optional<PegawaiModel> getPegawaiDetailByNip(String nip);
 	
 	List<PegawaiModel> getPegawaiMudaTuaInstansi(InstansiModel instansi);
+	
+	void addPegawai(PegawaiModel pegawai);
 }

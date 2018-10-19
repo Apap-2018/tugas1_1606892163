@@ -26,4 +26,9 @@ public class PegawaiServiceImpl implements PegawaiService {
 		List<PegawaiModel> listPegawaiMudaTua = pegawaiDb.findByInstansiOrderByTglLahirAsc(instansi);
 		return listPegawaiMudaTua;
 	}
+	
+	@Override
+	public void addPegawai(PegawaiModel pegawai) {
+		pegawaiDb.save(pegawai);
+	}
 }
