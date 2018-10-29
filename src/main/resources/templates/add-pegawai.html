@@ -28,12 +28,21 @@
 					<tr>
 						<td>Provinsi</td>
 						<td>
-							<select required="required" name="idProvinsi" form="formTambahPegawai" id="provinsi" class="form-control form-input">
-								<option disabled="disabled" selected="selected">Pilih Provinsi</option>
-								<span th:each="provinsi : ${listProvinsi}">
-									<option th:value="${provinsi.id}" th:text="${provinsi.nama}"></option>
-								</span>
-							</select>
+							<span th:if="*{instansi} == null">
+								<select required="required" name="idProvinsi" form="formTambahPegawai" value=${listProvinsi} id="provinsi" class="form-control form-input">
+									<option disabled="disabled" selected="selected">Pilih Provinsi</option>
+									<span th:each="provinsi : ${listProvinsi}">
+										<option th:value="${provinsi.id}" th:text="${provinsi.nama}"></option>
+									</span>
+								</select>
+							</span>
+							<span th:unless="*{instansi} == null">
+								<select required="required" name="idProvinsi" form="formTambahPegawai" value="*{instansi.provinsi}" id="provinsi" class="form-control form-input">
+									<span th:each="provinsi: ${listProvinsi}">
+										<option th:value="${provinsi.id}" th:text="${provinsi.nama}" th:selected="${provinsi.id} == *{instansi.provinsi.id}"></option>
+									</span>
+								</select>
+							</span>
 						</td>
 					</tr>
 					<tr>
@@ -65,22 +74,40 @@
 		</div>
 		<script th:inline="javascript">
 			$(document).ready(function(){
-				$('#provinsi').change(function() {
-					$.getJSON(
-							"/instansi/getByProvinsi", 
-							{idProvinsi : $(this).val()},
-							function(data) {
-								console.log("coewoic");
-								var optionHtml = '<option disabled="disabled" selected="selected">Pilih Instansi</option>';
-								var dataLength = data.length;
-								for (var i = 0; i < dataLength; i++) {
-									optionHtml += '<option th:value="' + data[i].id + '" >'
-													+ data[i].nama + '</option>';
-								}
-								console.log(optionHtml);
-								$('#instansi').html(optionHtml);
-							});
-					console.log("undoasdas");
+				$('#provinsi').change(
+					function() {
+						
+						$.ajax({
+							method : 'GET',
+							url : "/instansi/getByProvinsi",
+							data : {idProvinsi : $(this).val()}
+						}).done(function(data){
+							var optionHtml = '<option value="">Pilih Instansi</option>';
+							var dataLength = data.length;
+							for (var i = 0; i < dataLength; i++) {
+								optionHtml += '<option th:value="' + data[i].id + '" >'
+												+ data[i].nama + '</option>';
+							}
+							console.log(optionHtml);
+							$('#instansi').html(optionHtml);
+						}); 
+						/*
+						$.getJSON( "/instansi/getByProvinsi", {
+									idProvinsi : $(this).val(),
+									ajax : 'true'
+						}, function(data) {
+							console.log("coewoic");
+							var optionHtml = '<option value="">Pilih Instansi</option>';
+							var dataLength = data.length;
+							for (var i = 0; i < dataLength; i++) {
+								optionHtml += '<option th:value="' + data[i].id + '" >'
+												+ data[i].nama + '</option>';
+							}
+							console.log(optionHtml);
+							$('#instansi').html(optionHtml);
+						});
+						console.log("undoasdas");
+						*/
 				});
 			});
 		</script>
