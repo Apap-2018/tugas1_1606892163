@@ -139,10 +139,8 @@ public class PegawaiController {
 		PegawaiModel pegawai = new PegawaiModel();
 		
 		List<ProvinsiModel> listProvinsi = provinsiService.getAllProvinsi();
-		model.addAttribute("listProvinsi", listProvinsi);
 		
 		List<JabatanModel> listJabatanAll = jabatanService.getAllJabatan();
-		model.addAttribute("listJabatanAll", listJabatanAll);
 		
 		List<PegawaiModel> hasilPencarian = new ArrayList<PegawaiModel>();
 		
@@ -177,6 +175,13 @@ public class PegawaiController {
 				hasilPencarian = pegawaiService.getPegawaiByJabatan(jabatan);
 			}
 		}
+		
+		model.addAttribute("provinsi", provinsi);
+		model.addAttribute("instansi", instansi);
+		model.addAttribute("jabatan", jabatan);
+		
+		model.addAttribute("listProvinsi", listProvinsi);
+		model.addAttribute("listJabatanAll", listJabatanAll);
 		
 		model.addAttribute("hasilPencarian", hasilPencarian);
 		model.addAttribute("pegawai", pegawai);

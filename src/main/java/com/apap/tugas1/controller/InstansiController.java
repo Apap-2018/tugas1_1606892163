@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,10 +30,11 @@ public class InstansiController {
 	 */
 	@RequestMapping(value = "/instansi/getByProvinsi", method = RequestMethod.GET)
 	@ResponseBody
-	private List<InstansiModel> getInstansiByProvinsi(@RequestParam(value = "idProvinsi", required = true) long idProvinsi) {
+	private List<InstansiModel> getInstansiByProvinsi(@RequestParam(value = "idProvinsi", required = true) long idProvinsi, Model model) {
 		ProvinsiModel provinsi = provinsiService.getById(idProvinsi).get();
-		System.out.println("sadasdasdasd");
-		System.out.println(instansiService.getListInstansiByProvinsi(provinsi));
-		return instansiService.getListInstansiByProvinsi(provinsi);
+		List<InstansiModel> listInstansiByProv = instansiService.getListInstansiByProvinsi(provinsi);
+		model.addAttribute("listInstansiByProv", listInstansiByProv);
+		
+		return listInstansiByProv;
 	}
 }
