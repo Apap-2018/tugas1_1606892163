@@ -114,9 +114,8 @@ public class PegawaiController {
 	@RequestMapping(value = "/pegawai/tambah", method = RequestMethod.POST, params={"save"})
 	private String addPegawaiSubmit(@ModelAttribute PegawaiModel pegawai, Model model) {
 		
-		String nip = "";
 		pegawaiService.addPegawai(pegawai);
-		model.addAttribute("nip", nip);
+		model.addAttribute("nip", pegawai.getNip());
 		return "pegawai-added";
 	}
 }
