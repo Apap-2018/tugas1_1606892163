@@ -41,8 +41,7 @@ public class JabatanModel implements Serializable {
 	private Double gajiPokok;
 
 	@ManyToMany(mappedBy = "jabatans")
-	private List<PegawaiModel> pegawais;
-	
+	private List<PegawaiModel> pegawais;	
 
 	public long getId() {
 		return id;

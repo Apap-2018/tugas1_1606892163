@@ -8,33 +8,33 @@
 		<nav th:replace="fragments/fragment :: navbar"></nav>
 		<div class="container-fluid">
 			<br>
-			<h3 class="text-center">Daftar Semua Jabatan</h3>
+			<h3 class="text-center">Jumlah Pegawai di Setiap Jabatan</h3>
 			<br>
 			
-			<table id="tableAllJabatan" class="display">
+			<table id="tabelJabatan" class="display">
 				<thead>
 					<tr>
-						<th>Nama</th>
-						<th>Deskripsi</th>
-						<th>Gaji Pokok</th>
+						<th>Jabatan</th>
+						<th>Jumlah Pegawai</th>
 					</tr>
 				</thead>
 				<tbody>
 					<span th:each="jabatan : ${listJabatanAll}">
 						<tr>
 							<td th:text="${jabatan.nama}"></td>
-							<td th:text="${jabatan.deskripsi}"></td>
-							<td th:text="${jabatan.gajiPokok}"></td>
+							<td th:text="${#lists.size(jabatan.pegawais)}"></td>
 						</tr>
 					</span>
 				</tbody>
-			</table>		
+			</table>	
 		</div>
+		
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+		
+		<script>
+		$(document).ready( function () {
+		    $('#tabelJabatan').DataTable();
+		} );
+		</script>
 	</body>
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-	<script>
-	$(document).ready( function () {
-	    $('#tableAllJabatan').DataTable();
-	} );
-	</script>
 </html>

@@ -189,4 +189,12 @@ public class PegawaiController {
 		
 		return "cari-pegawai";
 	}
+	
+	@RequestMapping(value = "/pegawai/jumlah", method = RequestMethod.GET)
+	private String getJumlahPegawaiByJabatan(Model model) {
+		List<JabatanModel> listJabatanAll = jabatanService.getAllJabatan();
+		
+		model.addAttribute("listJabatanAll", listJabatanAll);
+		return "view-pegawai-jabatan";
+	}
 }
