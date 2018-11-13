@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import com.apap.tugas1.model.InstansiModel;
 import com.apap.tugas1.model.JabatanModel;
 import com.apap.tugas1.model.PegawaiModel;
-import com.apap.tugas1.model.ProvinsiModel;
 
 /**
  * PegawaiDb
@@ -24,4 +23,8 @@ public interface PegawaiDb extends JpaRepository<PegawaiModel, Long>{
 	List<PegawaiModel> findByJabatans(JabatanModel jabatan);
 	List<PegawaiModel> findByInstansi(InstansiModel instansi);
 	List<PegawaiModel> findByInstansiAndJabatans(InstansiModel instansi, JabatanModel jabatan);
+	List<PegawaiModel> findByThnMasuk(String thnMasuk);
+	List<PegawaiModel> findByJabatansAndThnMasuk(JabatanModel jabatan, String thnMasuk);
+	List<PegawaiModel> findByInstansiAndThnMasuk(InstansiModel instansi, String thnMasuk);
+	List<PegawaiModel> findByInstansiAndJabatansAndThnMasuk(InstansiModel instansi, JabatanModel jabatan, String thnMasuk);
 }

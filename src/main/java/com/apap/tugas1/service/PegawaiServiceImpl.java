@@ -73,5 +73,60 @@ public class PegawaiServiceImpl implements PegawaiService {
 		return listPegawai;
 	}
 	
+	@Override
+	public List<String> getAllThnMasuk() {
+		List<String> listThnMasuk = new ArrayList<String>();
+		
+		for (PegawaiModel pegawai : pegawaiDb.findAll()) {
+			if (!listThnMasuk.contains(pegawai.getThnMasuk())) {
+				listThnMasuk.add(pegawai.getThnMasuk());
+			}
+		}
+		
+		return listThnMasuk;
+	}
 	
+	@Override
+	public List<PegawaiModel> getPegawaiByThnMasuk(String thnMasuk) {
+		return pegawaiDb.findByThnMasuk(thnMasuk);
+	}
+	
+	@Override
+	public List<PegawaiModel> getPegawaiByJabatanAndThnMasuk(JabatanModel jabatan, String thnMasuk) {
+		return pegawaiDb.findByJabatansAndThnMasuk(jabatan, thnMasuk);
+	}
+	
+	@Override
+	public List<PegawaiModel> getPegawaiByProvinsiAndThnMasuk(ProvinsiModel provinsi, String thnMasuk) {
+		List<PegawaiModel> listPegawai = new ArrayList<PegawaiModel>();
+		
+		for (PegawaiModel pegawai : this.getPegawaiByProvinsi(provinsi)) {
+			if (pegawai.getThnMasuk().equals(thnMasuk)) {
+				listPegawai.add(pegawai);
+			}
+		}
+		return listPegawai;
+	}
+	
+	@Override
+	public List<PegawaiModel> getPegawaiByProvinsiAndJabatanAndThnMasuk(ProvinsiModel provinsi, JabatanModel jabatan, String thnMasuk) {
+		List<PegawaiModel> listPegawai = new ArrayList<PegawaiModel>();
+		
+		for (PegawaiModel pegawai : this.getPegawaiByProvinsiAndJabatan(provinsi, jabatan)) {
+			if (pegawai.getThnMasuk().equals(thnMasuk)) {
+				listPegawai.add(pegawai);
+			}
+		}
+		return listPegawai;
+	}
+	
+	@Override
+	public List<PegawaiModel> getPegawaiByInstansiAndThnMasuk(InstansiModel instansi, String thnMasuk) {
+		return pegawaiDb.findByInstansiAndThnMasuk(instansi, thnMasuk);
+	}
+	
+	@Override
+	public List<PegawaiModel> getPegawaiByInstansiAndJabatanAndThnMasuk(InstansiModel instansi, JabatanModel jabatan, String thnMasuk) {
+		return pegawaiDb.findByInstansiAndJabatansAndThnMasuk(instansi, jabatan, thnMasuk);
+	}
 }

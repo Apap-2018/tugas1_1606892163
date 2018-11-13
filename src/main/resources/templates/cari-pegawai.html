@@ -17,22 +17,6 @@
 								<option disabled="disabled" selected="selected">Pilih Provinsi</option>
 								<option th:each="provinsi : ${listProvinsi}" th:value="${provinsi.id}" th:text="${provinsi.nama}"></option>
 							</select>
-							
-							<!--  
-							
-							--------- Dropdown menu provinsi yang value nya sesuai dengan yang telah dipilih sebelumnya -------
-							
-							<select name="idProvinsi" form="formCariPegawai" id="provinsi" class="form-control form-input">
-								<span th:if="${provinsi} == null">	
-									<option disabled="disabled" selected="selected">Pilih Provinsi</option>
-									<option th:each="provinsi : ${listProvinsi}" th:value="${provinsi.id}" th:text="${provinsi.nama}"></option>
-								</span>
-								<span th:unless="${provinsi} == null">
-									<option selected="selected" th:value="${provinsi.id}" th:text="${provinsi.nama}"></option>
-									<option th:each="prov : ${listProvinsi}" th:value="${prov.id}" th:text="${prov.nama}"></option>	
-								</span>
-							</select>
-							 -->
 						</td>
 					</tr>
 					<tr>
@@ -41,25 +25,6 @@
 							<select name="idInstansi" form="formCariPegawai" id="instansi" class="form-control form-input">	
 								<option disabled="disabled" selected="selected">Pilih Instansi</option>	
 							</select>
-							
-							<!-- 
-							----- Dropdown menu nama instansi yang valuenya sesuai dengan provinsi yang telah dipilih sebelumnya -----
-							
-							<select name="idInstansi" form="formCariPegawai" id="instansi" class="form-control form-input">
-								<span th:if="${provinsi} == null">
-									<option disabled="disabled" selected="selected">Pilih Instansi</option>	
-								</span>
-								<span th:unless="${provinsi} == null">	
-									<span th:if="${instansi} == null">
-										<option disabled="disabled" selected="selected">Pilih Instansi</option>		
-									</span>
-									<span th:unless="${instansi} == null">
-										<option selected="selected" th:value="${instansi.id}" th:text="${instansi.nama}">
-									</span>
-									<option th:each="inst : ${listInstansiByProv}" th:value="${ints.id}" th:text="${ints.nama}"></option>
-								</span>
-							</select>
-							 -->
 						</td>
 					</tr>
 					<tr>
@@ -69,6 +34,17 @@
 								<option disabled="disabled" selected="selected">Pilih Jabatan</option>
 								<span th:each="jabatan : ${listJabatanAll}">
 									<option th:value="${jabatan.id}" th:text="${jabatan.nama}"></option>
+								</span>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Tahun Masuk</td>
+						<td>
+							<select name="thnMasuk" form="formCariPegawai" class="form-control">
+								<option disabled="disabled" selected="selected">Pilih Tahun Masuk Pegawai</option>
+								<span th:each="thnMasuk : ${listThnMasuk}">
+									<option th:value="${thnMasuk}" th:text="${thnMasuk}"></option>
 								</span>
 							</select>
 						</td>

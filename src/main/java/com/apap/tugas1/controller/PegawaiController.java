@@ -131,6 +131,7 @@ public class PegawaiController {
 	private String cariPegawai(	@RequestParam(value = "idProvinsi", required = false) Optional<Long> idProvinsi,
 								@RequestParam(value = "idInstansi", required = false) Optional<Long> idInstansi,
 								@RequestParam(value = "idJabatan", required = false) Optional<Long> idJabatan,
+								@RequestParam(value = "thnMasuk", required = false) Optional<String> thnMasuk,
 								Model model) {
 		
 		ProvinsiModel provinsi = null;
@@ -142,8 +143,10 @@ public class PegawaiController {
 		
 		List<JabatanModel> listJabatanAll = jabatanService.getAllJabatan();
 		
-		List<PegawaiModel> hasilPencarian = new ArrayList<PegawaiModel>();
+		List<String> listThnMasuk = pegawaiService.getAllThnMasuk();
 		
+		List<PegawaiModel> hasilPencarian = new ArrayList<PegawaiModel>();
+		model.addAttribute("listThnMasuk", listThnMasuk);
 		
 		if (idProvinsi.isPresent()) {
 			provinsi = provinsiService.getById(idProvinsi.get()).get();
@@ -153,26 +156,61 @@ public class PegawaiController {
 				
 				if (idJabatan.isPresent()) {
 					jabatan = jabatanService.getDetailJabatanById(idJabatan.get()).get();
-					hasilPencarian = pegawaiService.getPegawaiByInstansiAndJabatan(instansi, jabatan);
+					
+					if (thnMasuk.isPresent()) {
+						hasilPencarian = pegawaiService.getPegawaiByInstansiAndJabatanAndThnMasuk(instansi, jabatan, thnMasuk.get());
+					}
+					else {
+						hasilPencarian = pegawaiService.getPegawaiByInstansiAndJabatan(instansi, jabatan);
+					}
 				}
 				else {
-					hasilPencarian = pegawaiService.getPegawaiByInstansi(instansi);
+					if (thnMasuk.isPresent()) {
+						hasilPencarian = pegawaiService.getPegawaiByInstansiAndThnMasuk(instansi, thnMasuk.get());
+					}
+					else {
+						hasilPencarian = pegawaiService.getPegawaiByInstansi(instansi);
+
+					}
 				}
 			}
 			else {
 				if (idJabatan.isPresent()) {
 					jabatan = jabatanService.getDetailJabatanById(idJabatan.get()).get();
-					hasilPencarian = pegawaiService.getPegawaiByProvinsiAndJabatan(provinsi, jabatan);
+					
+					if (thnMasuk.isPresent()) {
+						hasilPencarian = pegawaiService.getPegawaiByProvinsiAndJabatanAndThnMasuk(provinsi, jabatan, thnMasuk.get());
+					}
+					else {
+						hasilPencarian = pegawaiService.getPegawaiByProvinsiAndJabatan(provinsi, jabatan);
+					}
 				}
 				else {
-					hasilPencarian = pegawaiService.getPegawaiByProvinsi(provinsi);
+					if (thnMasuk.isPresent()) {
+						hasilPencarian = pegawaiService.getPegawaiByProvinsiAndThnMasuk(provinsi, thnMasuk.get());
+					}
+					else {
+						hasilPencarian = pegawaiService.getPegawaiByProvinsi(provinsi);
+
+					}
 				}
 			}
 		}
 		else {
 			if (idJabatan.isPresent()) {
 				jabatan = jabatanService.getDetailJabatanById(idJabatan.get()).get();
-				hasilPencarian = pegawaiService.getPegawaiByJabatan(jabatan);
+				
+				if (thnMasuk.isPresent()) {
+					hasilPencarian = pegawaiService.getPegawaiByJabatanAndThnMasuk(jabatan, thnMasuk.get());
+				}
+				else {
+					hasilPencarian = pegawaiService.getPegawaiByJabatan(jabatan);
+				}
+			}
+			else {
+				if (thnMasuk.isPresent()) {
+					hasilPencarian = pegawaiService.getPegawaiByThnMasuk(thnMasuk.get());
+				}
 			}
 		}
 		
